@@ -1,16 +1,15 @@
 # Curso introductorio a Docker
 
-## 01 Sin docker
+## 00 Hola mundo
 
-- Crear un entorno virtual
-`python3 -m venv env`
+**Objetivo:** Familiarizarse con los comandos básicos y comprobar el correcto funcionamiento del entorno.
 
-- Activar entorno virtual
-macOS `source env/bin/activate`
-Windows `.\Scripts\activate`
+---
 
-- Instalar dependencias con pip
-`pip3 install -r requirements.txt`
-
-- Correr aplicación Flask
-`python -m flask run`
+- Corriendo el hola mundo
+  `docker run hello-world`
+- Corriendo ubuntu en modo interactivo
+  `docker run -it ubuntu bash`
+- Corriendo web app y publicando puerto
+  `docker run -d -p 80:80 docker/getting-started` 
+  - `cat /etc/os-release`
