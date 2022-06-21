@@ -2,15 +2,19 @@
 
 ## 01 Sin docker
 
+**Objetivo:** Generar una aplicación simple con Python y Flask.
+
+---
+
 - Crear un entorno virtual
-`python3 -m venv env`
+  `python3 -m venv env`
 
 - Activar entorno virtual
-macOS `source env/bin/activate`
-Windows `.\Scripts\activate`
+  macOS `source env/bin/activate`
+  Windows `.\Scripts\activate`
 
 - Instalar dependencias con pip
-`pip3 install -r requirements.txt`
+  `pip3 install -r requirements.txt`
 
 - Correr aplicación Flask
-`python -m flask run`
+  `python -m flask run`
