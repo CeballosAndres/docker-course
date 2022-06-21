@@ -1,16 +1,9 @@
 # Curso introductorio a Docker
 
-## 01 Sin docker
+Curso práctico de Docker nivel principiante.
 
-- Crear un entorno virtual
-`python3 -m venv env`
+> [Diapositivas de apoyo](https://docs.google.com/presentation/d/1JUnA9ZRBo3fSooLQkkYD8mRRbcgIG4WOmwWhFbVdTq4/edit?usp=sharing)
 
-- Activar entorno virtual
-macOS `source env/bin/activate`
-Windows `.\Scripts\activate`
+***
 
-- Instalar dependencias con pip
-`pip3 install -r requirements.txt`
-
-- Correr aplicación Flask
-`python -m flask run`
+Cada rama del repositorio corresponden a una práctica.
