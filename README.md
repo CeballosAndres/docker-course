@@ -8,3 +8,9 @@
 
 - Levantar contenedores con docker compose
   `docker-compose up -d`
+
+- 
+
+## Fuentes de referencia
+
+- https://docs.docker.com/compose/compose-file/compose-file-v3/

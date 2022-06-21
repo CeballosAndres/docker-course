@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    image: my-flask-app:v1
+    ports:
+      - 4000:5000
+    volumes:
+      - ~/course-docker:/usr/src/app
+    environment:
+      - FLASK_ENV=development
+
+  mysql:
+    image: arm64v8/mysql:oracle
+    container_name: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456789
+      - MYSQL_DATABASE=course_users
