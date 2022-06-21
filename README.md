@@ -10,8 +10,9 @@
   `python3 -m venv env`
 
 - Activar entorno virtual
-  macOS `source env/bin/activate`
-  Windows `.\Scripts\activate`
+
+  - macOS `source env/bin/activate`
+  - Windows `env\Scripts\activate`
 
 - Instalar dependencias con pip
   `pip3 install -r requirements.txt`
