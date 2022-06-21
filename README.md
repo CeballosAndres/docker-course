@@ -1,15 +1,18 @@
 # Curso introductorio a Docker
 
-## 03 Con docker file
+## 04 Agregando base de datos MySQL
 
-- Construir imagen con un tag
-`docker build -t my-flask-app:v1 .`
+- Ejecutando base de datos desde CLI
+`ID=$(docker run -e MYSQL_ROOT_PASSWORD=123456789 -d -P arm64v8/mysql:oracle)`
 
-- Correr contenedor en modo interactivo
-`docker run -it --rm --name my-running-app -p 5000:5000 my-flask-app:v1`
+- Obtener el puerto 3306 de MySQL
+`docker port $ID 3306`
+también se puede ver con
+`docker ps`
 
-- Correr montando volumen y con variable para debug mode
-`docker run -it --rm --name my-running-app -e FLASK_ENV=development -v ~/dev/hmh/docker-course:/usr/src/app -p 5000:5000 my-flask-app:v1`
+- Es posible definir una base de datos durante la construcción del contenedor
+`docker run -e MYSQL_ROOT_PASSWORD=123456789 -e MYSQL_DATABASE=curso_users -d -p 3306:3306 mysql`
 
-- Correr contenedor en modo detached
-`docker run --name my-running-app -p 5000:5000 -d my-flask-app:v1`
+### Fuentes de información
+- https://hub.docker.com/_/mysql
+
