@@ -15,7 +15,7 @@
   `docker ps`
 
 - Es posible definir una base de datos durante la construcción del contenedor
-  `docker run -e MYSQL_ROOT_PASSWORD=123456789 -e MYSQL_DATABASE=curso_users -d -p 3306:3306 mysql`
+  `docker run -e MYSQL_ROOT_PASSWORD=123456789 -e MYSQL_DATABASE=course -d -p 3307:3306 arm64v8/mysql:oracle`
 
 ### Fuentes de referencia
 
