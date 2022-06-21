@@ -3,12 +3,14 @@ version: '3.8'
 services:
   app:
     image: my-flask-app:v1
+    # build: .
     ports:
-      - 4000:5000
+      - 8000:5000
     volumes:
-      - ~/course-docker:/usr/src/app
+      - ~/dev/hmh/docker-course:/usr/src/app
     environment:
       - FLASK_ENV=development
+      - FLASK_APP=app.py
 
   mysql:
     image: arm64v8/mysql:oracle

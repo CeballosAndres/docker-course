@@ -8,8 +8,14 @@
 
 - Levantar contenedores con docker compose
   `docker-compose up -d`
+    - `--force-recreate`
+    - `--remove-orphans`
 
-- 
+- Ver logs de contenedores del docker compose
+  `docker-compose logs`
+
+- Detener y eliminar contenedores del docker compose
+  `docker-compose down`
 
 ## Fuentes de referencia
 
