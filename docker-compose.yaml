@@ -1,33 +1,33 @@
-version: '3.8'
-
+version: '3'
 services:
-  flask:
-    # image: my-flask-app:v1
-    build: .
-    restart: always
-    container_name: flask
-    ports:
-      - 8000:5000
-    volumes:
-      - ~/dev/hmh/docker-course:/usr/src/app
-    environment:
-      - FLASK_ENV=development
-      - FLASK_APP=app.py
-    networks:
-      - backend
+    flask-app:
+        container_name: flask-app
+        build: app
+        restart: always
+        ports:
+            - '5000:5000'
+        volumes:
+            - ./app:/app
+        networks:
+            - backend
 
-  db:
-    image: mysql:5.7
-    container_name: db 
-    restart: unless-stopped
-    ports:
-      - 3307:3306
-    volumes:
-        - ./database:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: course
-    networks:
-      - backend
+    mysql-db:
+        container_name: mysql-db
+        image: mysql:5.7
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: course
+        ports:
+            - '3308:3306'
+        volumes:
+            - ./database:/var/lib/mysql
+        networks:
+            - backend
+
 networks:
     backend:
+
+volumes:
+    app:
+    database:
