@@ -1,15 +1,18 @@
 # Curso introductorio a Docker
 
-## 04 Agregando base de datos MySQL
+## 05 Agregando base de datos MySQL
 
 **Objetivo:** Generar un archivo docker-compose que levante un entorno de desarrollo con la app Flask y la base de datos.
 
 ---
 
+### Pasos de la práctica
+
 - Levantar contenedores con docker compose
   `docker-compose up -d`
-    - `--force-recreate`
-    - `--remove-orphans`
+    - Algunos modificadores útiles son:
+      - `--force-recreate`
+      - `--remove-orphans`
 
 - Ver logs de contenedores del docker compose
   `docker-compose logs`
