@@ -17,7 +17,7 @@ services:
       - backend
 
   db:
-    image: /mysql:5.7
+    image: mysql:5.7
     container_name: db 
     restart: unless-stopped
     ports:
