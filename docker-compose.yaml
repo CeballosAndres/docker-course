@@ -1,9 +1,11 @@
 version: '3.8'
 
 services:
-  app:
-    image: my-flask-app:v1
-    # build: .
+  flask:
+    # image: my-flask-app:v1
+    build: .
+    restart: always
+    container_name: flask
     ports:
       - 8000:5000
     volumes:
@@ -11,14 +13,21 @@ services:
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.py
+    networks:
+      - backend
 
-  mysql:
-    image: arm64v8/mysql:oracle
-    container_name: mysql
+  db:
+    image: /mysql:5.7
+    container_name: db 
+    restart: unless-stopped
     ports:
-      - 3306:3306
+      - 3307:3306
     volumes:
-      - ~/apps/mysql:/var/lib/mysql
+        - ./database:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=123456789
-      - MYSQL_DATABASE=course_users
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: course
+    networks:
+      - backend
+networks:
+    backend:
