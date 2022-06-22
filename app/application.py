@@ -14,7 +14,7 @@ def get_connection():
 def index():
     con = get_connection()
     cur = con.cursor()
-    cur.execute("SELECT * FROM curse_users")
+    cur.execute("SELECT * FROM course_users")
     data = cur.fetchall()
     cur.close()
     con.close()
