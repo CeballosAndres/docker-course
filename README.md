@@ -25,6 +25,9 @@
   `docker run -e MYSQL_ROOT_PASSWORD=123456789 -e MYSQL_DATABASE=course -v ~/apps/mysql:/var/lib/mysql -d -p 3307:3306 arm64v8/mysql:oracle`
 
 - Conectarse, crear base de datos y tabla en base de datos, con script create_table.sql
+- **De la práctica anterior.**
+  - `docker build -t my-flask-app:alpine-v1 .` *poner el punto* 
+  - `docker run -it --rm --name my-running-app -e FLASK_ENV=development -v "$PWD":/usr/src/app -p 8000:5000 my-flask-app:alpine-v1`
 ### Fuentes de referencia
 
 - https://hub.docker.com/_/mysql
